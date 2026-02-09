@@ -46,10 +46,8 @@
             label6 = new Label();
             button1 = new Button();
             openFileDialog1 = new OpenFileDialog();
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -206,14 +204,6 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.TabIndex = 19;
-            pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             pictureBox2.Location = new Point(570, 88);
@@ -229,7 +219,6 @@
             BackgroundImage = Properties.Resources.Snimka_zaslona_2026_02_09_125428;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label6);
             Controls.Add(textBox1);
@@ -251,7 +240,6 @@
             Name = "Form2";
             Text = "Napomena";
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -277,7 +265,6 @@
         private Label label6;
         private Button button1;
         private OpenFileDialog openFileDialog1;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
     }
 }
