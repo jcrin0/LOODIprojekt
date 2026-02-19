@@ -206,9 +206,11 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(570, 88);
+            pictureBox2.Image = Properties.Resources.golden_retriever_tongue_out;
+            pictureBox2.Location = new Point(558, 34);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 50);
+            pictureBox2.Size = new Size(159, 116);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 20;
             pictureBox2.TabStop = false;
             // 

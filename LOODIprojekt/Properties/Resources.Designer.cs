@@ -63,6 +63,16 @@ namespace LOODIprojekt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap golden_retriever_tongue_out {
+            get {
+                object obj = ResourceManager.GetObject("golden-retriever-tongue-out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Snimka_zaslona_2026_02_09_125428 {
             get {
                 object obj = ResourceManager.GetObject("Snimka zaslona 2026-02-09 125428", resourceCulture);
