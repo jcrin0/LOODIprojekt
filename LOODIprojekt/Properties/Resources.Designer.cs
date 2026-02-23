@@ -63,6 +63,26 @@ namespace LOODIprojekt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_479765495_Zxt2juDUCoiCWfdkBwu9H3mgsgedATYl {
+            get {
+                object obj = ResourceManager.GetObject("360_F_479765495_Zxt2juDUCoiCWfdkBwu9H3mgsgedATYl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flat_exotic_animal_background_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("flat-exotic-animal-background-free-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap golden_retriever_tongue_out {
             get {
                 object obj = ResourceManager.GetObject("golden-retriever-tongue-out", resourceCulture);
