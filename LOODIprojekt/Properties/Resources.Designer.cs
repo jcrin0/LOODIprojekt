@@ -73,6 +73,16 @@ namespace LOODIprojekt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _61tKtatJQfL__AC_UF1000_1000_QL80_ {
+            get {
+                object obj = ResourceManager.GetObject("61tKtatJQfL._AC_UF1000,1000_QL80_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flat_exotic_animal_background_free_vector {
             get {
                 object obj = ResourceManager.GetObject("flat-exotic-animal-background-free-vector", resourceCulture);
