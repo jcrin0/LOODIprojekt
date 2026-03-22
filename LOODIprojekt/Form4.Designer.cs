@@ -31,6 +31,7 @@
             listBox1 = new ListBox();
             comboBox1 = new ComboBox();
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // listBox1
@@ -60,6 +61,17 @@
             button1.TabIndex = 2;
             button1.Text = "Reset";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(306, 36);
+            button2.Name = "button2";
+            button2.Size = new Size(171, 74);
+            button2.TabIndex = 3;
+            button2.Text = "Pretraži";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form4
             // 
@@ -67,6 +79,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Snimka_zaslona_2026_02_09_125459;
             ClientSize = new Size(686, 423);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(listBox1);
@@ -80,5 +93,6 @@
         private ListBox listBox1;
         private ComboBox comboBox1;
         private Button button1;
+        private Button button2;
     }
 }

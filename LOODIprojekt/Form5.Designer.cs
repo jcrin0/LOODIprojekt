@@ -35,6 +35,7 @@
             label2 = new Label();
             label3 = new Label();
             button1 = new Button();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // dateTimePicker1
@@ -43,6 +44,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(172, 23);
             dateTimePicker1.TabIndex = 0;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label1
             // 
@@ -93,6 +95,17 @@
             button1.TabIndex = 6;
             button1.Text = "Udomi";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(420, 88);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(254, 229);
+            listBox1.TabIndex = 7;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // Form5
             // 
@@ -100,6 +113,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._360_F_479765495_Zxt2juDUCoiCWfdkBwu9H3mgsgedATYl;
             ClientSize = new Size(791, 528);
+            Controls.Add(listBox1);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -122,5 +136,6 @@
         private Label label2;
         private Label label3;
         private Button button1;
+        private ListBox listBox1;
     }
 }

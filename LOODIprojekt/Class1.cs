@@ -1,4 +1,5 @@
-﻿using System;
+﻿    using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,76 @@ namespace LOODIprojekt
             sw.Close();
 
         }
-        public static List<string> FilterVrsta(string vrsta)
+        public static List<string> Ucitaj()
         {
-            List<string> animals = new List<string>();
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("animals.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+        public static List<string> FilterVrsta()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("animals.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                string[] dijelovi = linija.Split('|');
+                string vrsta = dijelovi[1];
+                lista.Add(vrsta);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+        public static List<string> Vrste()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("animals.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                string[] dijelovi = linija.Split('|');
+                string vrsta = dijelovi[1];
+                lista.Add(vrsta);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+
+        public static List<string> PronadiPoVrsti(string kriterij)
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("animals.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                string[] dijelovi = linija.Split('|');
+                if (dijelovi[1] == kriterij)
+                {
+                    lista.Add(linija);
+                }
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
 
 
-            return animals;
+        }
+        public static void UnosUdomitelja(string zapis)
+        {
+            StreamWriter sw = new StreamWriter("udomitelji.txt", true);
+            sw.WriteLine(zapis);
+            sw.Close();
+
+
         }
     }
 }

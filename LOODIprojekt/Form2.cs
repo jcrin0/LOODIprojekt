@@ -29,10 +29,10 @@ namespace LOODIprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
+
 
             string spol;
-            if(radioButton1.Checked)
+            if (radioButton1.Checked)
             {
                 spol = "M";
             }
@@ -52,12 +52,12 @@ namespace LOODIprojekt
                            spol + "|" + numericUpDown1.Value + "|" + dateTimePicker1.Text + "|" +
                            checkBox1.Checked + "|" + checkBox2.Checked + "|" + textBox1.Text;
 
-            
+
             Admin.SaveAnimal(zapis);
 
             MessageBox.Show("Životinja je spremljena.");
 
-          
+
             textBox3.Text = "";
             textBox4.Text = "";
             textBox2.Text = "";
@@ -68,6 +68,13 @@ namespace LOODIprojekt
             dateTimePicker1.Value = DateTime.Now;
             checkBox1.Checked = false;
             checkBox2.Checked = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string slika = openFileDialog1.FileName;
+            pictureBox2.Load(slika);
         }
     }
 }

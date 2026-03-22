@@ -47,6 +47,7 @@
             button1 = new Button();
             openFileDialog1 = new OpenFileDialog();
             pictureBox2 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -215,12 +216,23 @@
             pictureBox2.TabIndex = 20;
             pictureBox2.TabStop = false;
             // 
+            // button2
+            // 
+            button2.Location = new Point(575, 156);
+            button2.Name = "button2";
+            button2.Size = new Size(129, 23);
+            button2.TabIndex = 21;
+            button2.Text = "Odaberi sliku";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Snimka_zaslona_2026_02_09_125428;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(label6);
@@ -269,5 +281,6 @@
         private Button button1;
         private OpenFileDialog openFileDialog1;
         private PictureBox pictureBox2;
+        private Button button2;
     }
 }
