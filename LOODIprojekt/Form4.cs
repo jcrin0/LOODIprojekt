@@ -43,9 +43,19 @@ namespace LOODIprojekt
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string kriterij = comboBox1.Text;
+            List<string> vrste;
             comboBox1.Items.Clear();
-            string kriterij = comboBox1.SelectedItem.ToString();
-            List<string> vrste = Admin.PronadiPoVrsti(kriterij);
+            if (kriterij == null)
+            {
+                MessageBox.Show("Molimo odaberite vrstu iz padajućeg izbornika.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+              
+                vrste = Admin.PronadiPoVrsti(kriterij);
+            }
             foreach (string vrsta in vrste)
             {
                 listBox1.Items.Add(vrsta.Replace("|", " "));
