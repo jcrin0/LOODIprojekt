@@ -87,5 +87,38 @@ namespace LOODIprojekt
 
 
         }
+        public static List<string> UcitajUdomitelje()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("udomitelji.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+        public static double ProsjecnaDob()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("animals.txt");
+            string linija = sr.ReadLine();
+            int brojac = 0;
+            int suma = 0;
+            while (linija != null)
+            {
+                string[] dijelovi = linija.Split('|');
+                int dob = int.Parse(dijelovi[4]);
+                suma += dob;
+                brojac++;
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            double prosjek = (double)suma / brojac;
+            return prosjek;
+
+        }
     }
 }

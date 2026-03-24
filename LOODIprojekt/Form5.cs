@@ -28,8 +28,15 @@ namespace LOODIprojekt
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.RemoveAt(i);
-            string zapis = textBox1.Text + "|" + textBox2 + "|" + dateTimePicker1.Text;
+            if (i >= 0 && i < listBox1.Items.Count)
+            {
+                listBox1.Items.RemoveAt(i);
+            }
+            else
+            {
+                MessageBox.Show("Invalid index or empty list.");
+            }
+            string zapis = textBox1.Text + "|" + textBox2.Text + "|" + dateTimePicker1.Text;
             Admin.UnosUdomitelja(zapis);
         }
 
