@@ -25,21 +25,27 @@ namespace LOODIprojekt
         {
             List<string> lista = Admin.Ucitaj();
             int brojac = 0;
-            foreach (string s in lista)
+            foreach (string linija in lista)
             {
                 brojac++;
             }
-            listBox1.Items.Add("Broj zivotinja u azilu: " + brojac);
-            List<string> udomitelj = Admin.UcitajUdomitelje();
-            int udomljenih = 0;
-            foreach (string s in udomitelj)
+            statistika.Items.Add("Ukupan broj zivotinja u azilu je " + brojac);
+            List<string> Udomitelj = Admin.UcitajUdomitelje();
+            int brojac2 = 0;
+            foreach (string linija in Udomitelj)
             {
-                udomljenih++;
+                brojac2++;
             }
-            listBox1.Items.Add("Broj udomljenih zivotinja: " + udomljenih);
-            listBox1.Items.Add("Broj zivotinja koje su još uvijek u azilu: " + (brojac - udomljenih));
-            listBox1.Items.Add("Prosječna dob zivotinja u azilu: " + Admin.ProsjecnaDob() + " godina");
+            statistika.Items.Add("Ukupan broj udomljenih je " + brojac2);
+            statistika.Items.Add("Broj trenutno prisutnih zivotinja je " + (brojac - brojac2));
+            statistika.Items.Add("Prosjecna dob zivotinja u azilu je " + Admin.ProsjecnaDob());
+            statistika.Items.Add("Broj zivotinja po vrstama: ");
+            foreach (string linija in Admin.VrsteBroj())
+            {
+                statistika.Items.Add(linija);
 
+
+            }
 
         }
     }

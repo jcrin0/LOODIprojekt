@@ -49,6 +49,9 @@ namespace LOODIprojekt
             textBox7 = new TextBox();
             textBox8 = new TextBox();
             textBox9 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -64,20 +67,22 @@ namespace LOODIprojekt
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(593, 38);
+            pictureBox1.Location = new Point(539, 21);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(161, 163);
+            pictureBox1.Size = new Size(206, 158);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(276, 21);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(27, 15);
             label1.TabIndex = 2;
-            label1.Text = "label1";
+            label1.Text = "Ime";
             label1.Click += label1_Click;
             // 
             // label2
@@ -85,135 +90,166 @@ namespace LOODIprojekt
             label2.AutoSize = true;
             label2.Location = new Point(276, 62);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(33, 15);
             label2.TabIndex = 3;
-            label2.Text = "label2";
+            label2.Text = "Vrsta";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(276, 100);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(52, 15);
             label3.TabIndex = 4;
-            label3.Text = "label3";
+            label3.Text = "Pasmina";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(276, 136);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(30, 15);
             label4.TabIndex = 5;
-            label4.Text = "label4";
+            label4.Text = "Spol";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(276, 186);
+            label5.Location = new Point(276, 173);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(29, 15);
             label5.TabIndex = 6;
-            label5.Text = "label5";
+            label5.Text = "Dob";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(276, 266);
+            label6.Location = new Point(271, 214);
             label6.Name = "label6";
-            label6.Size = new Size(38, 15);
+            label6.Size = new Size(89, 15);
             label6.TabIndex = 7;
-            label6.Text = "label6";
+            label6.Text = "Datum dolaska:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(276, 375);
+            label7.Location = new Point(276, 254);
             label7.Name = "label7";
-            label7.Size = new Size(38, 15);
+            label7.Size = new Size(53, 15);
             label7.TabIndex = 8;
-            label7.Text = "label7";
+            label7.Text = "Cijepljen";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(276, 427);
+            label8.Location = new Point(276, 299);
             label8.Name = "label8";
-            label8.Size = new Size(38, 15);
+            label8.Size = new Size(53, 15);
             label8.TabIndex = 9;
-            label8.Text = "label8";
+            label8.Text = "Kastriran";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(276, 475);
+            label9.Location = new Point(276, 352);
             label9.Name = "label9";
-            label9.Size = new Size(38, 15);
+            label9.Size = new Size(66, 15);
             label9.TabIndex = 10;
-            label9.Text = "label9";
+            label9.Text = "Napomena";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(380, 24);
+            textBox1.Location = new Point(320, 21);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(8, 23);
+            textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 11;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(381, 110);
+            textBox2.Location = new Point(320, 62);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 12;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(404, 179);
+            textBox3.Location = new Point(334, 97);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 13;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(436, 278);
+            textBox4.Location = new Point(320, 133);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 14;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(479, 332);
+            textBox5.Location = new Point(320, 173);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(8, 23);
+            textBox5.Size = new Size(100, 23);
             textBox5.TabIndex = 15;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(487, 389);
+            textBox6.Location = new Point(338, 254);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(8, 23);
+            textBox6.Size = new Size(96, 23);
             textBox6.TabIndex = 16;
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(460, 428);
+            textBox7.Location = new Point(366, 214);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(8, 23);
+            textBox7.Size = new Size(116, 23);
             textBox7.TabIndex = 17;
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(476, 459);
+            textBox8.Location = new Point(334, 296);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(100, 23);
             textBox8.TabIndex = 18;
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(534, 505);
+            textBox9.Location = new Point(348, 349);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(8, 23);
+            textBox9.Size = new Size(114, 23);
             textBox9.TabIndex = 19;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(521, 332);
+            button1.Name = "button1";
+            button1.Size = new Size(200, 100);
+            button1.TabIndex = 20;
+            button1.Text = "Naprijed";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(521, 438);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 100);
+            button2.TabIndex = 21;
+            button2.Text = "Nazad";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(511, 314);
+            label10.Name = "label10";
+            label10.Size = new Size(234, 15);
+            label10.TabIndex = 22;
+            label10.Text = "Kliknite Naprijed za prikaz sljedeće životinje";
+            label10.Click += label10_Click;
             // 
             // Form3
             // 
@@ -221,6 +257,9 @@ namespace LOODIprojekt
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.flat_exotic_animal_background_free_vector;
             ClientSize = new Size(802, 567);
+            Controls.Add(label10);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(textBox9);
             Controls.Add(textBox8);
             Controls.Add(textBox7);
@@ -276,5 +315,8 @@ namespace LOODIprojekt
         private TextBox textBox7;
         private TextBox textBox8;
         private TextBox textBox9;
+        private Button button1;
+        private Button button2;
+        private Label label10;
     }
 }

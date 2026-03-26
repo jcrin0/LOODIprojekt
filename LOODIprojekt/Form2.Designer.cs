@@ -208,7 +208,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(575, 156);
+            button2.Location = new Point(569, 202);
             button2.Name = "button2";
             button2.Size = new Size(129, 23);
             button2.TabIndex = 21;
@@ -218,9 +218,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(542, 21);
+            pictureBox1.Location = new Point(532, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(202, 129);
+            pictureBox1.Size = new Size(206, 158);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 22;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;

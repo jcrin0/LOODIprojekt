@@ -17,7 +17,7 @@ namespace LOODIprojekt
         {
             InitializeComponent();
         }
-
+        int i = 0;
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -25,30 +25,93 @@ namespace LOODIprojekt
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            try
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<string> lista = Admin.Ucitaj();
+            i++;
+            if (i < lista.Count)
             {
-                listBox1.Items.Clear();
-                const string path = "animals.txt";
-
-                if (!File.Exists(path))
-                {
-                    MessageBox.Show("Nema zapisa za prikaz.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                var lines = File.ReadAllLines(path, Encoding.UTF8);
-                foreach (var line in lines)
-                {
-                    if (!string.IsNullOrWhiteSpace(line))
-                        listBox1.Items.Add(line);
-                }
+                string[] prvi = lista[i].Split('|');
+                textBox1.Text = prvi[0];
+                textBox2.Text = prvi[1];
+                textBox3.Text = prvi[2];
+                textBox4.Text = prvi[3];
+                textBox5.Text = prvi[4];
+                textBox6.Text = prvi[5];
+                textBox7.Text = prvi[6];
+                textBox8.Text = prvi[7];
+                textBox9.Text = prvi[8];
+                pictureBox1.Load(prvi[9]);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Greška pri čitanju zapisa: " + ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                i = 0;
+                string[] prvi = lista[i].Split('|');
+                textBox1.Text = prvi[0];
+                textBox2.Text = prvi[1];
+                textBox3.Text = prvi[2];
+                textBox4.Text = prvi[3];
+                textBox5.Text = prvi[4];
+                textBox6.Text = prvi[5];
+                textBox7.Text = prvi[6];
+                textBox8.Text = prvi[7];
+                textBox9.Text = prvi[8];
+                pictureBox1.Load(prvi[9]);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<string> lista = Admin.Ucitaj();
+            i--;
+            if (i >= 0)
+            {
+                string[] prvi = lista[i].Split('|');
+                textBox1.Text = prvi[0];
+                textBox2.Text = prvi[1];
+                textBox3.Text = prvi[2];
+                textBox4.Text = prvi[3];
+                textBox5.Text = prvi[4];
+                textBox6.Text = prvi[5];
+                textBox7.Text = prvi[6];
+                textBox8.Text = prvi[7];
+                textBox9.Text = prvi[8];
+                pictureBox1.Load(prvi[9]);
+            }
+            else
+            {
+                i = lista.Count - 1;
+                string[] prvi = lista[i].Split('|');
+                textBox1.Text = prvi[0];
+                textBox2.Text = prvi[1];
+                textBox3.Text = prvi[2];
+                textBox4.Text = prvi[3];
+                textBox5.Text = prvi[4];
+                textBox6.Text = prvi[5];
+                textBox7.Text = prvi[6];
+                textBox8.Text = prvi[7];
+                textBox9.Text = prvi[8];
+                pictureBox1.Load(prvi[9]);
             }
         }
 
-        
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

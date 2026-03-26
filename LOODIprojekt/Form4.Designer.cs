@@ -42,11 +42,11 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(228, 184);
             listBox1.TabIndex = 0;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Australski ovčar", "Hrvatski ovčar", "Labrador", "Kavalir", "Pomeranac" });
             comboBox1.Location = new Point(94, 226);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);

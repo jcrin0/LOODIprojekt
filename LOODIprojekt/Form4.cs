@@ -13,7 +13,7 @@ namespace LOODIprojekt
 {
     public partial class Form4 : Form
     {
-        private const string DataFile = "animals.txt";
+        
 
         public Form4()
         {
@@ -34,33 +34,28 @@ namespace LOODIprojekt
         private void button1_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            List<string> lista = Admin.FilterVrsta();
-            foreach (string linija in lista)
+            string kriterij = comboBox1.SelectedItem.ToString();
+            List<string> vrste = Admin.PronadiPoVrsti(kriterij);
+            foreach (string vrsta in vrste)
             {
-                listBox1.Items.Add(linija.Replace("|", " "));
+                listBox1.Items.Add(vrsta.Replace('|', ' '));
+
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string kriterij = comboBox1.Text;
-            List<string> vrste;
-            comboBox1.Items.Clear();
-            if (kriterij == null)
+            listBox1.Items.Clear();
+            List<string> lista = Admin.Ucitaj();
+            foreach (string linija in lista)
             {
-                MessageBox.Show("Molimo odaberite vrstu iz padajućeg izbornika.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                listBox1.Items.Add(linija.Replace('|', ' '));
             }
-            else
-            {
-              
-                vrste = Admin.PronadiPoVrsti(kriterij);
-            }
-            foreach (string vrsta in vrste)
-            {
-                listBox1.Items.Add(vrsta.Replace("|", " "));
+        }
 
-            }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

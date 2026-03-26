@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dateTimePicker1 = new DateTimePicker();
+            Datum = new DateTimePicker();
             label1 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
             label3 = new Label();
             button1 = new Button();
-            listBox1 = new ListBox();
+            NaseZivotinje = new ListBox();
+            label4 = new Label();
             SuspendLayout();
             // 
-            // dateTimePicker1
+            // Datum
             // 
-            dateTimePicker1.Location = new Point(139, 162);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(172, 23);
-            dateTimePicker1.TabIndex = 0;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            Datum.Location = new Point(139, 162);
+            Datum.Name = "Datum";
+            Datum.Size = new Size(172, 23);
+            Datum.TabIndex = 0;
+            Datum.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label1
             // 
@@ -97,15 +98,24 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // listBox1
+            // NaseZivotinje
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(420, 88);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(254, 229);
-            listBox1.TabIndex = 7;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            NaseZivotinje.FormattingEnabled = true;
+            NaseZivotinje.ItemHeight = 15;
+            NaseZivotinje.Location = new Point(373, 71);
+            NaseZivotinje.Name = "NaseZivotinje";
+            NaseZivotinje.Size = new Size(346, 289);
+            NaseZivotinje.TabIndex = 7;
+            NaseZivotinje.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(414, 53);
+            label4.Name = "label4";
+            label4.Size = new Size(260, 15);
+            label4.TabIndex = 8;
+            label4.Text = "Kliknite dva puta na životinju koju želite udomiti";
             // 
             // Form5
             // 
@@ -113,14 +123,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._360_F_479765495_Zxt2juDUCoiCWfdkBwu9H3mgsgedATYl;
             ClientSize = new Size(791, 528);
-            Controls.Add(listBox1);
+            Controls.Add(label4);
+            Controls.Add(NaseZivotinje);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(Datum);
             Name = "Form5";
             Text = "Form5";
             ResumeLayout(false);
@@ -129,13 +140,14 @@
 
         #endregion
 
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker Datum;
         private Label label1;
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
         private Label label3;
         private Button button1;
-        private ListBox listBox1;
+        private ListBox NaseZivotinje;
+        private Label label4;
     }
 }

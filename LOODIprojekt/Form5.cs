@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LOODIprojekt
 {
@@ -22,21 +23,14 @@ namespace LOODIprojekt
             List<string> lista = Admin.Ucitaj();
             foreach (string s in lista)
             {
-                listBox1.Items.Add(s.Replace("|", " "));
+                NaseZivotinje.Items.Add(s.Replace("|", " "));
 
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (i >= 0 && i < listBox1.Items.Count)
-            {
-                listBox1.Items.RemoveAt(i);
-            }
-            else
-            {
-                MessageBox.Show("Invalid index or empty list.");
-            }
-            string zapis = textBox1.Text + "|" + textBox2.Text + "|" + dateTimePicker1.Text;
+            NaseZivotinje.Items.RemoveAt(i);
+            string zapis = textBox1.Text + "|" + textBox2.Text + "|" + Datum.Text;
             Admin.UnosUdomitelja(zapis);
         }
 
@@ -46,7 +40,7 @@ namespace LOODIprojekt
         }
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            i = listBox1.SelectedIndex;
+            i = NaseZivotinje.SelectedIndex;
 
         }
 
