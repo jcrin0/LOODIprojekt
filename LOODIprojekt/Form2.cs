@@ -29,7 +29,9 @@ namespace LOODIprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string slika = openFileDialog1.FileName;
+            
+            string kast = "";
 
             string spol;
             if (radioButton1.Checked)
@@ -45,12 +47,29 @@ namespace LOODIprojekt
                 MessageBox.Show("Odaberite spol životinje.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (checkBox1.Checked == true)
+            {
+                kast = "kastriran";
+            }
+            else
+            {
+                kast = "Nije kastriran";
+            }
+            string cijep = "";
+            if (checkBox2.Checked == true)
+            {
+                cijep = "cijepljen";
+            }
+            else
+            {
+                cijep = "Nije cijepljen";
+            }
 
 
 
             string zapis = textBox3.Text + "|" + textBox4.Text + "|" + textBox2.Text + "|" +
                            spol + "|" + numericUpDown1.Value + "|" + dateTimePicker1.Text + "|" +
-                           checkBox1.Checked + "|" + checkBox2.Checked + "|" + textBox1.Text;
+                           kast + "|" + cijep + "|" + textBox1.Text;
 
 
             Admin.SaveAnimal(zapis);
@@ -74,7 +93,12 @@ namespace LOODIprojekt
         {
             openFileDialog1.ShowDialog();
             string slika = openFileDialog1.FileName;
-            pictureBox2.Load(slika);
+            pictureBox1.Load(slika);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

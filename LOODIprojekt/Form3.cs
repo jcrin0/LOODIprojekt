@@ -20,7 +20,7 @@ namespace LOODIprojekt
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -48,5 +48,7 @@ namespace LOODIprojekt
                 MessageBox.Show("Greška pri čitanju zapisa: " + ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }
