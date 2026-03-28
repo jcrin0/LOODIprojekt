@@ -30,7 +30,6 @@ namespace LOODIprojekt
         private void InitializeComponent()
         {
             listBox1 = new ListBox();
-            pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -52,6 +51,7 @@ namespace LOODIprojekt
             button1 = new Button();
             button2 = new Button();
             label10 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -64,16 +64,6 @@ namespace LOODIprojekt
             listBox1.Size = new Size(231, 199);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(539, 21);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(206, 158);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
@@ -251,12 +241,22 @@ namespace LOODIprojekt
             label10.Text = "Kliknite Naprijed za prikaz sljedeće životinje";
             label10.Click += label10_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(534, 30);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(187, 166);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 23;
+            pictureBox1.TabStop = false;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.flat_exotic_animal_background_free_vector;
             ClientSize = new Size(802, 567);
+            Controls.Add(pictureBox1);
             Controls.Add(label10);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -278,7 +278,6 @@ namespace LOODIprojekt
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
             Controls.Add(listBox1);
             Name = "Form3";
             Text = "Form3";
@@ -296,7 +295,6 @@ namespace LOODIprojekt
         #endregion
 
         private ListBox listBox1;
-        private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -318,5 +316,6 @@ namespace LOODIprojekt
         private Button button1;
         private Button button2;
         private Label label10;
+        private PictureBox pictureBox1;
     }
 }

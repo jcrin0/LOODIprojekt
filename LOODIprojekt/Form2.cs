@@ -66,7 +66,7 @@ namespace LOODIprojekt
                 spol = "Žensko";
             }
             string zapis = textBox3.Text + "|" + textBox4.Text + "|" + textBox2.Text + "|" + spol + "|" + numericUpDown1.Text + "|" + dateTimePicker1.Text + "|" + cijep + "|" + kast + "|" + textBox1.Text + "|" + slika;
-            Admin.Unos(zapis);
+            Admin.UnosZivotinje(zapis);
             textBox3.Clear();
             textBox4.Clear();
             textBox2.Clear();
@@ -77,7 +77,7 @@ namespace LOODIprojekt
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             textBox1.Clear();
-
+            pictureBox1.Image = null;
 
         }
 

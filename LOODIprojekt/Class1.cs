@@ -9,24 +9,20 @@ namespace LOODIprojekt
 {
     public static class Admin
     {
-        public static void Unos(string zapis)
+        public static void UnosZivotinje(string zapis)
         {
+
             StreamWriter sw = new StreamWriter("azil.txt", true);
             sw.WriteLine(zapis);
             sw.Close();
+
         }
-        public static void UnosUdomitelja(string zapis)
-        {
-            StreamWriter sw = new StreamWriter("udomitelji.txt", true);
-            sw.WriteLine(zapis);
-            sw.Close();
-        }
+
         public static List<string> Ucitaj()
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
             string linija = sr.ReadLine();
-
             while (linija != null)
             {
                 lista.Add(linija);
@@ -36,26 +32,11 @@ namespace LOODIprojekt
             return lista;
         }
 
-        public static List<string> UcitajUdomitelje()
-        {
-            List<string> lista = new List<string>();
-            StreamReader sr = new StreamReader("udomitelji.txt");
-            string linija = sr.ReadLine();
-
-            while (linija != null)
-            {
-                lista.Add(linija);
-                linija = sr.ReadLine();
-            }
-            sr.Close();
-            return lista;
-        }
         public static List<string> Vrste()
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
             string linija = sr.ReadLine();
-
             while (linija != null)
             {
                 string[] dijelovi = linija.Split('|');
@@ -64,33 +45,7 @@ namespace LOODIprojekt
                 linija = sr.ReadLine();
             }
             sr.Close();
-            lista = lista.Distinct().ToList();
             return lista;
-        }
-        public static List<string> VrsteBroj()
-        {
-            List<string> lista = Ucitaj();
-            List<string> lista2 = Vrste();
-            List<string> lista3 = new List<string>();
-            StreamReader sr = new StreamReader("azil.txt");
-            foreach (string vrsta in lista2)
-            {
-
-                int brojac = 0;
-
-                foreach (string linija in lista)
-                {
-                    string[] dijelovi = linija.Split('|');
-                    if (dijelovi[1] == vrsta)
-                    {
-                        brojac++;
-                    }
-                }
-                lista3.Add(vrsta + ": " + brojac);
-
-
-            }
-            return lista3;
         }
 
         public static List<string> PronadiPoVrsti(string kriterij)
@@ -109,7 +64,32 @@ namespace LOODIprojekt
             }
             sr.Close();
             return lista;
+
+
         }
+        public static void UnosUdomitelja(string zapis)
+        {
+            StreamWriter sw = new StreamWriter("udomitelji.txt", true);
+            sw.WriteLine(zapis);
+            sw.Close();
+
+
+        }
+
+        public static List<string> UcitajUdomitelje()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("udomitelji.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+
         public static double ProsjecnaDob()
         {
             List<string> lista = new List<string>();
@@ -128,8 +108,31 @@ namespace LOODIprojekt
             sr.Close();
             double prosjek = (double)suma / brojac;
             return prosjek;
+
         }
 
+        public static List<string> VrsteBroj()
+        {
+            List<string> lista = Ucitaj();
+            List<string> lista2 = Vrste();
+            List<string> lista3 = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+
+            foreach (string vrsta in lista2)
+            {
+                int brojac = 0;
+                foreach (string linija in lista)
+                {
+                    string[] dijelovi = linija.Split('|');
+                    if (dijelovi[1] == vrsta)
+                    {
+                        brojac++;
+                    }
+                }
+                lista3.Add(vrsta + ": " + brojac);
+            }
+            return lista3;
+        }
 
     }
 }

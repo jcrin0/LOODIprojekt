@@ -42,7 +42,6 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(228, 184);
             listBox1.TabIndex = 0;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // comboBox1
             // 
@@ -71,7 +70,6 @@
             button2.TabIndex = 3;
             button2.Text = "Pretraži";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // Form4
             // 

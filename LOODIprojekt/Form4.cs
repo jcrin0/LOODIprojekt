@@ -13,26 +13,23 @@ namespace LOODIprojekt
 {
     public partial class Form4 : Form
     {
-        
+
+
 
         public Form4()
         {
             InitializeComponent();
-
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
             comboBox1.DataSource = Admin.Vrste().Distinct().ToList();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             listBox1.Items.Clear();
             string kriterij = comboBox1.SelectedItem.ToString();
             List<string> vrste = Admin.PronadiPoVrsti(kriterij);
@@ -51,9 +48,10 @@ namespace LOODIprojekt
             {
                 listBox1.Items.Add(linija.Replace('|', ' '));
             }
+
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
