@@ -46,6 +46,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Austalski ovčar", "Pomeranac", "Maltezer", "Hrvatski ovčar" });
             comboBox1.Location = new Point(94, 226);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
